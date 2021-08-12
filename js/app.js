@@ -55,7 +55,9 @@ document.getElementById('backimage').addEventListener('change', evt => {
             backimage_sprite.x = 300;
             backimage_sprite.y = 400;
             
-            
+            stage.addChild(backimage_sprite);
+            renderer.render(stage);
+
             backimage_sprite.interactive = true;
 
             let move_card = function(e){
@@ -79,6 +81,7 @@ document.getElementById('backimage').addEventListener('change', evt => {
 
 });
 
+//背景画像の拡大率
 document.getElementById("scale").onchange = function() {
     if(backimage_sprite != 0){
         backimage_sprite.scale.set(Number(document.getElementById("scale").value));
@@ -89,13 +92,6 @@ document.getElementById("scale").onchange = function() {
 
 document.getElementById("create").onclick = function() {
     stage.removeChildren();
-   
-    // 背景画像の追加
-    if(backimage_sprite != 0){
-        console.log(backimage_sprite);
-        stage.addChild(backimage_sprite);
-    }
-    
 
     //メインのカード画像
     let val = document.getElementById("images").value;
