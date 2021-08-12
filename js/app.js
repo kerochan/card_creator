@@ -93,6 +93,13 @@ document.getElementById("scale").onchange = function() {
 document.getElementById("create").onclick = function() {
     stage.removeChildren();
 
+   
+    // 背景画像の追加
+    if(backimage_sprite != 0){
+        stage.addChild(backimage_sprite);
+    }
+    
+
     //メインのカード画像
     let val = document.getElementById("images").value;
     let texture_main = new PIXI.Texture.from("./images/" + val + ".png");
