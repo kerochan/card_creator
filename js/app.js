@@ -79,6 +79,13 @@ document.getElementById('backimage').addEventListener('change', evt => {
 
 });
 
+document.getElementById("scale").onchange = function() {
+    if(backimage_sprite != 0){
+        backimage_sprite.scale.set(Number(document.getElementById("scale").value));
+        renderer.render(stage);
+    }
+}
+
 
 document.getElementById("create").onclick = function() {
     stage.removeChildren();
