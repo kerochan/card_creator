@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <title>カード作成システム</title>
+
+        <link rel="stylesheet" type="text/css" media="screen" href="./css/sample.css" />
+
+        <!-- pixi.jsの本体の読み込み -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.0.1/pixi.min.js"></script>
+
+        <!-- アニメーション用のライブラリ(GSAP/TweenMax)の読み込み -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/plugins/PixiPlugin.min.js"></script>
+        <!-- 外部フォント読み込み用のライブラリの読み込み -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+        <!-- 外部フォントの定義用css(sample.css等とまとめてしまっても問題ありません) -->
+        <link rel="stylesheet" type="text/css" media="screen" href="./css/font.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div id="canvas" class="canvas"></div>
+            <div id ="inputs" class="inputs">
+
+                カード画像<br><select id="images">
+                    <option value="safe">Safe</option>
+                    <option value="euclid">Euclid</option>
+                    <option value="keter">Keter</option>
+                    <!--
+                    <option value="neutralized">Neutralized</option>
+                    <option value="explained">Explained</option>
+                    <option value="thaumiel">Thaumiel</option>
+                    <option value="unclassed">Unclassed</option>
+                    <option value="anomalous">Anomalous</option>
+                -->
+                    <option value="tale">Tale</option>
+                    <option value="incident">Incident</option>
+                </select>
+                <br>
+                背景画像<br><input type="file" id="backimage"><br>
+                カード名<br><input type="text" id="cardname"><br>
+                カード名テキストサイズ<br><input type="number" min="20" max = "40" value="40" id="cardname_fontsize"><br>
+                確保力<br><input type="number"  min="0" max="12" value="0" id="attack"><br>
+                カードタイプ<br><input type="text" id="cardtype"><br>
+                効果<br><textarea cols="50" rows="5"  id="effect"></textarea><br>
+                効果テキストサイズ<br><input type="number" min="10" max = "25" value="18" id="effect_fontsize"><br>
+                フレーバーテキスト<br><textarea cols="50" rows="3"  id="flavor"></textarea><br>
+                フレーバーテキストサイズ<br><input type="number" min="10" max = "20" value="15" id="flavor_fontsize"><br>
+                タグ<br><textarea cols="50" rows="3"  id="tag"></textarea><br>
+                タグテキストサイズ<br><input type="number" min="15" max = "25" value="25" id="tag_fontsize"><br><br>
+                <input type="submit" value="画像生成" id="create">
+                <input type="submit" value="ダウンロード" id="download">
+                
+            </div>
+        </div>
+        
+    </body>
+    <script type="text/javascript" src="./js/app.js"></script>
+</html>

@@ -1,0 +1,19 @@
+body{
+    background-color: wheat;
+}
+
+.inputs{
+    float : right;
+    margin : 10px ;
+    padding : 20px ;
+    border : 3px solid maroon ;
+    background-color :skyblue ;
+}
+
+.canvas{
+    float: left;
+}
+
+.container{
+    overflow: hidden;
+}
