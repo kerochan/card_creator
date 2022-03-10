@@ -140,7 +140,7 @@ document.getElementById("create").onclick = function() {
         fontFamily: ["03SmartFontUI"],
         fontSize: effect_fontsize,
         wordWrap : true,
-        wordWrapWidth : 550,
+        wordWrapWidth : 545,
         breakWords : true
     });
     console.log(effect_fontsize);
