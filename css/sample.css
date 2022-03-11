@@ -2,17 +2,20 @@ body{
     background-color: wheat;
 }
 
+
+.canvas{
+    float: left;
+    width: 50%;
+
+}
+
 .inputs{
     float: left;
 
     border : 3px solid maroon ;
     background-color :skyblue ;
     padding: 10px;
+    overflow: auto;
 }
 
-.canvas{
-    float: left;
-    width: 50%;
-    margin-bottom: 100px;
-}
 
