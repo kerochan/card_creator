@@ -10,7 +10,7 @@ body{
 }
 
 .inputs{
-    float: left;
+    float: right;
 
     border : 3px solid maroon ;
     background-color :skyblue ;
