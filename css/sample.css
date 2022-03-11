@@ -3,17 +3,16 @@ body{
 }
 
 .inputs{
-    float : right;
-    margin : 10px ;
-    padding : 20px ;
+    float: left;
+
     border : 3px solid maroon ;
     background-color :skyblue ;
+    padding: 10px;
 }
 
 .canvas{
     float: left;
+    width: 50%;
+    margin-bottom: 100px;
 }
 
-.container{
-    overflow: hidden;
-}

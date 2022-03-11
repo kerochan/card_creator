@@ -210,7 +210,10 @@ document.getElementById("create").onclick = function() {
         fontSize: cardname_fontsize,
         wordWrap : true,
         wordWrapWidth : 550,
-        breakWords : true
+        breakWords : true,
+        fill : document.getElementById("fill").value,
+        stroke :  document.getElementById("stroke").value,
+        strokeThickness :  Number(document.getElementById("stroketickness").value)
     });
     let cardname = new PIXI.Text(document.getElementById("cardname").value, textstyle_cardname);
     cardname.anchor.set(0.5);
