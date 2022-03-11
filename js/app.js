@@ -12,6 +12,25 @@ document.getElementById("canvas").appendChild(renderer.view);
 
 renderer.render(stage);
 
+//コストと確保力とタグの表示or非表示
+
+//オブジェクトかどうかのフラグ
+let objF = true;
+document.getElementById("images").onchange = function(){
+    let imagename = document.getElementById("images").value;
+    if(imagename == "tale" || imagename == "incident" || imagename == "personnel" || imagename == "canon"){
+        document.getElementById("disp1").style.display = "none";
+        document.getElementById("disp2").style.display = "none";
+        objF = false;
+    }else{
+        document.getElementById("disp1").style.display = "inline";
+        document.getElementById("disp2").style.display = "inline";
+        objF = true;
+    }
+}
+
+
+
 
 
 document.getElementById("download").onclick = function(){
@@ -102,7 +121,11 @@ document.getElementById("create").onclick = function() {
 
     //メインのカード画像
     let val = document.getElementById("images").value;
-    let texture_main = new PIXI.Texture.from("./images/" + val + ".png");
+    let cost = "";
+    if(objF){
+        cost = document.getElementById("cost").value;
+    }
+    let texture_main = new PIXI.Texture.from("./images/" + val + cost + ".png");
     let sprite_main = new PIXI.Sprite(texture_main);
     sprite_main.anchor.set(0.5);
     sprite_main.x = sprite_main.width / 2;

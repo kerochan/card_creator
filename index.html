@@ -28,34 +28,34 @@
                     <option value="safe">Safe</option>
                     <option value="euclid">Euclid</option>
                     <option value="keter">Keter</option>
-                    <option value="unclassed0">Unclassed0</option>
-                    <option value="unclassed1">Unclassed1</option>
-                    <option value="unclassed2">Unclassed2</option>
-                    <option value="unclassed3">Unclassed3</option>
-                    <!--
                     <option value="neutralized">Neutralized</option>
                     <option value="explained">Explained</option>
                     <option value="thaumiel">Thaumiel</option>
                     <option value="unclassed">Unclassed</option>
                     <option value="anomalous">Anomalous</option>
-                -->
                     <option value="tale">Tale</option>
                     <option value="incident">Incident</option>
                     <option value="personnel">人事</option>
+                    <option value="canon">カノン</option>
                 </select>
                 <br>
                 背景画像<br><input type="file" id="backimage"><br>
                 背景画像拡大率<br><input type="number" step="0.1" min="0.0" max="2.0" id="scale"><br>
                 カード名<br><input type="text" id="cardname"><br>
                 カード名テキストサイズ<br><input type="number" min="20" max = "40" value="40" id="cardname_fontsize"><br>
-                確保力<br><input type="number"  min="0" max="12" value="0" id="attack"><br>
+                <div id = "disp1">
+                    コスト<br><input type="number"  min="0" max="3" value="1" id="cost"><br>
+                    確保力<br><input type="number"  min="0" max="12" value="0" id="attack"><br>
+                </div>
                 カードタイプ<br><input type="text" id="cardtype"><br>
                 効果<br><textarea cols="50" rows="5"  id="effect"></textarea><br>
                 効果テキストサイズ<br><input type="number" min="10" max = "25" value="18" id="effect_fontsize"><br>
                 フレーバーテキスト<br><textarea cols="50" rows="3"  id="flavor"></textarea><br>
                 フレーバーテキストサイズ<br><input type="number" min="10" max = "20" value="15" id="flavor_fontsize"><br>
-                タグ<br><textarea cols="50" rows="3"  id="tag"></textarea><br>
-                タグテキストサイズ<br><input type="number" min="15" max = "25" value="25" id="tag_fontsize"><br><br>
+                <div id = "disp2">
+                    タグ<br><textarea cols="50" rows="3"  id="tag"></textarea><br>
+                    タグテキストサイズ<br><input type="number" min="15" max = "25" value="25" id="tag_fontsize"><br><br>
+                </div>
                 <input type="submit" value="画像生成" id="create">
                 <input type="submit" value="ダウンロード" id="download">
                 
