@@ -177,6 +177,7 @@ document.getElementById("create").onclick = function() {
     let flavor_fontsize = Number(document.getElementById("flavor_fontsize").value);
     let textstyle_flavor = new PIXI.TextStyle({
         fontFamily: ["GenEi Antique v5 Medium"],
+        fontWeight: "bold",
         fontSize: flavor_fontsize,
         wordWrap : true,
         wordWrapWidth : 550,
